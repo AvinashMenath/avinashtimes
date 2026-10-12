@@ -343,6 +343,45 @@ ul {
   font-size: 0.95rem;
 }
 
+/* ---------- WhatsApp Contact ---------- */
+.whatsapp {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: var(--navy);
+  text-align: center;
+}
+
+.whatsapp .section-head {
+  margin-bottom: 1.5rem;
+}
+
+.whatsapp-copy {
+  max-width: 42rem;
+  margin: 0 auto 1.8rem;
+  color: var(--muted);
+}
+
+.btn-whatsapp {
+  max-width: 100%;
+  background: #25d366;
+  color: var(--black);
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 4px;
+}
+
+.whatsapp-number {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--black);
