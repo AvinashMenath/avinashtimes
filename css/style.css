@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -158,6 +159,12 @@ ul {
   padding: 0.4rem;
 }
 
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 .nav-toggle span {
   width: 26px;
   height: 2px;
@@ -194,6 +201,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1920&q=80') center / cover no-repeat;
   animation: heroZoom 20s ease-in-out infinite alternate;
 }
@@ -201,6 +209,7 @@ ul {
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: linear-gradient(180deg, rgba(7, 9, 15, 0.6) 0%, rgba(11, 26, 51, 0.75) 60%, var(--black) 100%);
 }
 
@@ -445,11 +454,13 @@ ul {
     background: rgba(7, 9, 15, 0.97);
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition);
+    visibility: hidden;
+    transition: max-height var(--transition), visibility var(--transition);
   }
 
   .site-nav.open {
     max-height: 300px;
+    visibility: visible;
     border-bottom: 1px solid rgba(212, 175, 55, 0.25);
   }
 
