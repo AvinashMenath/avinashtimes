@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="ai-chat.css">
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -95,6 +96,32 @@
     <p class="copyright">&copy; <span id="year">2026</span> Avinash Times. All rights reserved.</p>
   </footer>
 
+  <aside class="aic-widget" aria-label="Avinash Times chat">
+    <button class="aic-launcher" id="aic-launcher" type="button" aria-label="Open chat" aria-expanded="false" aria-controls="aic-panel">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H3l2-4a8.5 8.5 0 1 1 16-4.5Z"/>
+        <path d="M8 10h8M8 14h5"/>
+      </svg>
+    </button>
+    <section class="aic-panel" id="aic-panel" role="dialog" aria-labelledby="aic-title" aria-hidden="true" inert>
+      <header class="aic-header">
+        <h2 id="aic-title">Avinash Times Assistant</h2>
+        <button class="aic-close" id="aic-close" type="button" aria-label="Close chat">&times;</button>
+      </header>
+      <div class="aic-history" id="aic-history" role="log" aria-label="Chat history" aria-live="polite" aria-relevant="additions text" tabindex="0"></div>
+      <div class="aic-typing" id="aic-typing" role="status" hidden>
+        <span class="aic-sr-only">Assistant is typing</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </div>
+      <form class="aic-form" id="aic-form">
+        <label class="aic-sr-only" for="aic-input">Your message</label>
+        <input id="aic-input" type="text" placeholder="Ask about our shop…" autocomplete="off">
+        <button class="aic-send" id="aic-send" type="submit">Send</button>
+      </form>
+    </section>
+  </aside>
+
   <script src="js/main.js"></script>
+  <script src="ai-chat.js" defer></script>
 </body>
 </html>
